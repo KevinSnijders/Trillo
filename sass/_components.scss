@@ -147,6 +147,9 @@
 
     &:not(:last-child) {
       margin-bottom: .5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
     }
 
     &::before {
@@ -247,6 +250,18 @@
   align-items: center;
   border-bottom: 1px solid var(--color-grey-light-2);
 
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+
+    & > * {
+      flex: 0 0 50%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+
   &__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -258,11 +273,19 @@
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
     }
+    @media only screen and (max-width: $bp-smallest) {
+      order: 1;
+    }
   }
 
   &__stars {
     margin-right: auto;
     display: flex;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: 0;
+      order: 3;
+    }
   }
 
   &__icon--star, &__icon--location {
@@ -275,6 +298,10 @@
     font-size: 1.2rem;
     display: flex;
     vertical-align: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      order: 2;
+    }
 
   }
 
@@ -296,6 +323,12 @@
 
     @media only screen and (max-width: $bp-small) {
       padding: 0 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin: auto;
+      flex: 0 0 25%;
+      order: 4;
     }
 
     &--average {
