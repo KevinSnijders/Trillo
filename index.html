@@ -220,4 +220,29 @@
     </div>
 </div>
 </body>
+
+<!--
+Added fallback for loading svg sprites in IE
+The fallback js file is only loaded whenever the user uses a internet explorer browser.
+!-->
+<script>
+	// Detect Internet Explorer 6-11
+	let isIE = /*@cc_on!@*/false || !!document.documentMode;
+	if (isIE) {
+		loadScript('/assets/javascript/vendor/svg4everybody.js', function () {
+			svg4everybody();
+		});
+	}
+
+	function loadScript(url, callback) {
+		let script = document.createElement("script");
+		script.type = "text/javascript";
+		script.onload = function () {
+			callback();
+		};
+		script.src = url;
+		document.getElementsByTagName("body")[0].appendChild(script);
+	}
+</script>
+
 </html>
