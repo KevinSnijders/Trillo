@@ -25,7 +25,7 @@
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    background-color: var(--color-grey-light-2);
+    background-color: $color-grey-light-2;
     border: none;
     padding: .7rem 2rem;
     border-radius: 100px;
@@ -36,23 +36,23 @@
     &:focus {
       outline: none;
       width: 100%;
-      background-color: var(--color-grey-light-3);
+      background-color: $color-grey-light-3;
     }
 
     &::-webkit-input-placeholder {
       font-weight: 100;
-      color: var(--color-grey-light-4)
+      color: $color-grey-light-4
     }
 
   }
 
   &__input:focus + &__button {
-    background-color: var(--color-grey-light-2);
+    background-color: $color-grey-light-2;
   }
 
   &__button {
     border: none;
-    background-color: var(--color-grey-light-2);
+    background-color: $color-grey-light-2;
 
     &:focus {
       outline: none;
@@ -66,7 +66,7 @@
   &__icon {
     height: 2rem;
     width: 2rem;
-    fill: var(--color-grey-dark-3);
+    fill: $color-grey-dark-3;
   }
 }
 
@@ -85,7 +85,7 @@
     align-items: center;
 
     &:hover {
-      background-color: var(--color-grey-light-2);
+      background-color: $color-grey-light-2;
     }
   }
 
@@ -97,7 +97,7 @@
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
-    fill: var(--color-grey-dark-2);
+    fill: $color-grey-dark-2;
 
   }
 
@@ -105,7 +105,7 @@
     font-size: .8rem;
     height: 1.75rem;
     width: 1.75rem;
-    background-color: var(--color-primary);
+    background-color: $color-primary;
     border-radius: 50%;
     color: #fff;
     position: absolute;
@@ -159,7 +159,7 @@
       left: 0;
       height: 100%;
       width: 3px;
-      background-color: var(--color-primary);
+      background-color: $color-primary;
       transition: transform .2s, width cubic-bezier(1, 0, 0, 1) .4s .2s, background-color .1s;
       transform: scaleY(0);
     }
@@ -171,7 +171,7 @@
     }
 
     &:active::before {
-      background-color: var(--color-primary-light);
+      background-color: $color-primary-light;
     }
 
 
@@ -180,7 +180,7 @@
   &__link {
     &:link,
     &:visited {
-      color: var(--color-grey-light-1);
+      color: $color-grey-light-1;
       text-decoration: none;
       text-transform: uppercase;
       padding: 1.5rem 3rem;
@@ -220,7 +220,7 @@
 //Legal text
 .legal {
   font-size: 1.2rem;
-  color: var(--color-grey-dark-4);
+  color: $color-grey-dark-3;
   text-align: center;
   padding: 2.5rem;
 
@@ -248,7 +248,7 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: 1px solid $color-grey-light-2;
 
   @media only screen and (max-width: $bp-smallest) {
     flex-wrap: wrap;
@@ -291,7 +291,7 @@
   &__icon--star, &__icon--location {
     width: 1.75rem;
     height: 1.75rem;
-    fill: var(--color-primary);
+    fill: $color-primary;
   }
 
   &__location {
@@ -310,7 +310,7 @@
   }
 
   &__rating {
-    background-color: var(--color-primary);
+    background-color: $color-primary;
     color: #fff;
     margin-left: 3rem;
     padding: 0 2.25rem;
@@ -354,7 +354,7 @@
 //// Button Inline
 .btn-inline {
   border: none;
-  color: var(--color-primary);
+  color: $color-primary;
   font-size: inherit;
   border-bottom: 1px solid currentColor;
   padding: 2px;
@@ -368,7 +368,7 @@
   }
 
   &:hover {
-    color: var(--color-grey-dark-1);
+    color: $color-grey-dark-1;
 
     & span {
       margin-left: 8px;
@@ -407,8 +407,8 @@
   list-style: none;
   margin: 3rem 0;
   padding: 3rem 0;
-  border-top: var(--line);
-  border-bottom: var(--line);
+  border-top: $line;
+  border-bottom: $line;
 
   display: flex;
   flex-wrap: wrap;
@@ -428,7 +428,7 @@
       background-size: cover;
 
       @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         -webkit-mask-image: url(../img/chevron-thin-right.svg);
         -webkit-mask-size: cover;
         mask-size: cover;
@@ -440,7 +440,7 @@
 
 .recommend {
   font-size: 1.3rem;
-  color: var(--color-grey-dark-3);
+  color: $color-grey-dark-3;
 
   display: flex;
   align-items: center;
@@ -469,7 +469,7 @@
 
 .review {
   background-color: #fff;
-  box-shadow: var(--shadow-light);
+  box-shadow: $shadow-light;
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative;
@@ -487,7 +487,7 @@
     left: -1rem;
     line-height: 1;
     font-size: 20rem;
-    color: var(--color-grey-light-2);
+    color: $color-grey-light-2;
     font-family: sans-serif;
     z-index: 1;
 
@@ -516,7 +516,7 @@
 
     &--date {
       font-size: 1.1rem;
-      color: var(--color-grey-dark-3);
+      color: $color-grey-dark-3;
     }
 
   }
@@ -530,7 +530,7 @@
 
   &__rating {
     font-size: 2.2rem;
-    color: var(--color-primary);
+    color: $color-primary;
     font-weight: 300;
   }
 }
@@ -560,7 +560,7 @@
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
-  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -584,7 +584,7 @@
   }
 
   &:hover {
-    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
   }
   &:hover &__visible {
     transform: translateY(100%);
