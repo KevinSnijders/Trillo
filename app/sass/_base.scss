@@ -25,15 +25,15 @@
 
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: inherit;
 }
 
-html{
+html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px, 10px/16px = 62.5%;
 
-  @media only screen and (max-width: $bp-large){
+  @media only screen and (max-width: $bp-large) {
     font-size: 50%;
   }
 }
@@ -46,6 +46,11 @@ body {
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
   background-size: cover;
   background-repeat: no-repeat;
-
   min-height: 100vh;
+
+  @media (max-width: $bp-medium) and (min-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
